@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedalingo - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Vedalingo - Translate Sanskrit</h1>
+    </header>
+    
+    <main>
+        <section class="translation-section">
+            <h2>Translation</h2>
+            <select id="inputType">
+                <option value="text">Text Input</option>
+                <option value="file">Upload File (PDF/Image)</option>
+            </select>
+            <div id="textField" class="input-field">
+                <textarea id="textInput" placeholder="Enter Sanskrit text..."></textarea>
+            </div>
+            <div id="fileInput" class="input-field" style="display: none;">
+                <input type="file" accept=".pdf, .jpg, .jpeg, .png" id="file" />
+            </div>
+            <label for="targetLanguage">Select Language:</label>
+            <select id="targetLanguage">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="mr">Marathi</option>
+                <!-- Add more language options as needed -->
+            </select>
+            <button id="translateButton" class="action-button">Translate</button>
+            <div id="translationResult" class="translation-result"></div>
+            <audio controls id="audioPlayer"></audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vedalingo. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
